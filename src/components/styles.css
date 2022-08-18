@@ -5,9 +5,7 @@
 }
 
 #canvas-container {
-  background: rgb(2,0,36);
-  opacity: 0.95;
-  background: radial-gradient(circle, rgb(16, 32, 134) 0%, rgb(93, 63, 141) 53%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(circle, rgb(16, 28, 83) 0%, rgba(93, 63, 141, 0.842) 53%, rgba(0, 0, 0, 0.815) 100%);
 }
 
 #canvas-container, body, html, #root {

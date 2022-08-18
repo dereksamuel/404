@@ -9,7 +9,7 @@ export default function Model(props) {
         <pointLight color="white" position={[50, 0, 50]} intensity={1} />
         <group rotation={[Math.PI / 2, -1.5, 0]} scale={0.0095} position={[0, 0, 0.9]}>
           <group rotation={[-Math.PI / 2, 0, 0]}>
-            <pointLight color="orange" position={[100, 0, 100]} intensity={1} />
+            <pointLight color="orange" position={[200, 0, 50]} intensity={1} />
             <mesh geometry={nodes.mtl_us_space_glove_c_mtl_us_space_glove_c_0.geometry} material={materials.mtl_us_space_glove_c} />
             <mesh geometry={nodes.mtl_us_space_glove_c_1_mtl_us_space_glove_c_0.geometry} material={materials.mtl_us_space_glove_c} />
             <mesh geometry={nodes.mtl_us_space_glove_c_2_mtl_us_space_glove_c_0.geometry} material={materials.mtl_us_space_glove_c} />
