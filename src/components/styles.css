@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#canvas-container {
+  background: rgb(2,0,36);
+  opacity: 0.95;
+  background: radial-gradient(circle, rgb(16, 32, 134) 0%, rgb(93, 63, 141) 53%, rgba(0,0,0,1) 100%);
+}
+
+#canvas-container, body, html, #root {
+  height: 100%;
+}
