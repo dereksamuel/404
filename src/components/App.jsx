@@ -10,7 +10,7 @@ export default function App () {
 
   return (
     <div id="canvas-container">
-      <audio autoPlay ref={$audio} src="/electric-light-orchestra-last-train-to-london-official-video-ytmp4converter.com-en.m4a" className='audio'></audio>
+      <audio loop ref={$audio} src="/electric-light-orchestra-last-train-to-london-official-video-ytmp4converter.com-en.m4a" className='audio'></audio>
       <header className="header">
         <img
           alt="logo"
@@ -21,10 +21,6 @@ export default function App () {
         <h3>
           Inicio
         </h3>
-
-        <h3 className='playSecond' onClick={() => $audio.current.play()}>
-          Play
-        </h3>
       </header>
 
     {/* <footer className="footer">
@@ -34,7 +30,7 @@ export default function App () {
         colorManagement
         shadows
       >
-        <MoonUI />
+        <MoonUI $audio={$audio} />
 
         <Stars
           count={3000}

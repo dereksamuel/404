@@ -2,7 +2,7 @@ import React from 'react'
 
 import Lobster from '.'
 
-export default function Text404() {
+export default function Text404(props) {
   const options404 = {
     size: 0.5,
     bevelEnabled: true,
@@ -15,6 +15,6 @@ export default function Text404() {
   }
 
   return (
-    <Lobster anotherProps={options404}>404</Lobster>
+    <Lobster anotherProps={options404} {...props}>404</Lobster>
   )
 }
