@@ -43,8 +43,19 @@
   text-align: center;
   padding: 2rem 0;
   z-index: 3;
+  display: flex;
+  justify-content: center;
 }
 
-.footer {
-  font-weight: normal;
+.footer figure {
+  display: block;
+  background-color: black;
+  border-radius: 50%;
+  max-width: 50px;
+  height: 50px;
+}
+
+.footer img {
+  width: 100%;
+  padding: 1rem;
 }

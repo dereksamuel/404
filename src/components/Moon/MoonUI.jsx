@@ -7,22 +7,14 @@ import Astronaut from '../Astronaut/index.jsx';
 import Error from '../Lobster/Error';
 import Text404 from '../Lobster/Text404.jsx';
 
-export default function MoonUI({ $audio }) {
+export default function MoonUI({ $audio, goAnimation }) {
   const [state, setState] = useState({
-    goAnimation: false,
     counterRotation: 0.0
   })
   const $moon404 = useRef(null)
 
-  const onToggleMoon = () => {
-    setState({
-      ...state,
-      goAnimation: !state.goAnimation
-    })
-  }
-
   useFrame(() => {
-    if (state.goAnimation) {
+    if (goAnimation) {
       setState({
         ...state,
         counterRotation: state.counterRotation + 0.0180
@@ -35,22 +27,20 @@ export default function MoonUI({ $audio }) {
       $moon404.current.rotation.y = Math.sin(state.counterRotation)
     }
 
-    if (!state.goAnimation) {
+    if (!goAnimation) {
       $audio.current.pause()
     }
   })
 
   useEffect(() => {
     console.log('Change')
-  }, [state.goAnimation])
+  }, [goAnimation])
 
   return (
     <group ref={$moon404}>
       <Astronaut />
       <Error />
-      <mesh onClick={onToggleMoon}>
-        <Text404 />
-      </mesh>
+      <Text404 />
       {/* <Play /> */}
       <Moon />
     </group>
