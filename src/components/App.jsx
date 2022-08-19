@@ -1,32 +1,66 @@
-import { Cloud, Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import React from 'react';
+import {Cloud, Stars} from '@react-three/drei';
+import {Canvas} from '@react-three/fiber';
 
-import Moon from "./Moon/index.jsx";
-import Astronaut from "./Astronaut/index.jsx";
-import Error404 from "./Lobster/Error404.jsx";
+import MoonUI from './Moon/MoonUI.jsx';
+import './styles.css';
 
-import "./styles.css";
-
-export default function App() {
+export default function App () {
   return (
     <div id="canvas-container">
-      <Canvas shadows colorManagement>
-        <group>
-          <Error404 />
-          <Astronaut />
-          <Moon />
-        </group>
-        <Stars radius={45} count={3000} depth={25} saturation={0.5} fade speed={0.5} />
-        <Cloud
-          opacity={0.20}
-          speed={2.5} // Rotation speed
-          width={0.1} // Width of the full cloud
-          depth={0} // Z-dir depth
-          segments={15} // Number of particles
+      <header className="header">
+        <img
+          alt="logo"
+          className="logo"
+          src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/08/dc-logo.png"
         />
-        <pointLight color="rgb(208, 197, 228)" position={[400, 0, 500]} intensity={1} />
-        <ambientLight color="rgb(93, 63, 141)" intensity={1} />
+
+        <h3>
+          Inicio
+        </h3>
+      </header>
+
+    {/* <footer className="footer">
+      <h3>Page not found</h3>
+    </footer> */}
+      <Canvas
+        colorManagement
+        shadows
+      >
+        <MoonUI />
+
+        <Stars
+          count={3000}
+          depth={25}
+          fade
+          radius={45}
+          saturation={0.5}
+          speed={0.5}
+        />
+
+        <Cloud
+          depth={0}
+          opacity={0.15} // Rotation speed
+          segments={15} // Width of the full cloud
+          speed={2.5} // Z-dir depth
+          width={0.1}
+        />
+
+        <pointLight
+          color="rgb(208, 197, 228)"
+          intensity={1}
+          position={[
+              400,
+              0,
+              500
+          ]}
+        />
+
+        <ambientLight
+          color="rgb(93, 63, 141)"
+          intensity={1}
+        />
       </Canvas>
     </div>
-  )
+  );
 }

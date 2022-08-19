@@ -1,7 +1,9 @@
-import { Text3D } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
+import React from 'react'
+import { Text3D } from '@react-three/drei';
+import { useLoader } from '@react-three/fiber';
+import { TextureLoader } from 'three';
 
+// eslint-disable-next-line react/prop-types
 export default function Lobster({ children, anotherProps }) {
   const colorMap = useLoader(TextureLoader, '/textures/Material.001_baseColor.jpeg')
 
