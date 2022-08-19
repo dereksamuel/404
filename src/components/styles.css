@@ -30,6 +30,11 @@
   text-decoration: underline;
 }
 
+.playSecond {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

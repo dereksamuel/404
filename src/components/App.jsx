@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {Cloud, Stars} from '@react-three/drei';
 import {Canvas} from '@react-three/fiber';
 
@@ -6,8 +6,11 @@ import MoonUI from './Moon/MoonUI.jsx';
 import './styles.css';
 
 export default function App () {
+  const $audio = useRef(null)
+
   return (
     <div id="canvas-container">
+      <audio autoPlay ref={$audio} src="/electric-light-orchestra-last-train-to-london-official-video-ytmp4converter.com-en.m4a" className='audio'></audio>
       <header className="header">
         <img
           alt="logo"
@@ -17,6 +20,10 @@ export default function App () {
 
         <h3>
           Inicio
+        </h3>
+
+        <h3 className='playSecond' onClick={() => $audio.current.play()}>
+          Play
         </h3>
       </header>
 
